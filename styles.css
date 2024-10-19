@@ -95,7 +95,7 @@ flex-direction: column;
 align-items: center;
 }
 
-input[type="email"] {
+input[type="email"], input[type="text"], input[type="password"] {
 padding: 10px;
 margin: 10px 0;
 border: none;
