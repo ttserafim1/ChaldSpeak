@@ -2,7 +2,7 @@ body {
 font-family: 'Arial', sans-serif;
 margin: 0;
 padding: 0;
-background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+background: linear-gradient(135deg, #00c6ff, #0072ff);
 color: #FFF;
 }
 
@@ -13,7 +13,7 @@ padding: 20px;
 }
 
 header {
-background: linear-gradient(135deg, #23272A, #2C2F33);
+background: linear-gradient(135deg, #0072ff, #00c6ff);
 padding: 20px 0;
 text-align: center;
 }
@@ -35,7 +35,7 @@ margin: 0 15px;
 }
 
 nav ul li a {
-color: #7289DA;
+color: #FFF;
 text-decoration: none;
 font-weight: bold;
 }
@@ -49,7 +49,7 @@ margin-bottom: 40px;
 }
 
 button {
-background: linear-gradient(135deg, #7289DA, #5A6FB8);
+background: linear-gradient(135deg, #00c6ff, #0072ff);
 color: white;
 border: none;
 padding: 10px 20px;
@@ -61,11 +61,11 @@ transition: background 0.3s ease;
 }
 
 button:hover {
-background: linear-gradient(135deg, #5A6FB8, #7289DA);
+background: linear-gradient(135deg, #0072ff, #00c6ff);
 }
 
 footer {
-background: linear-gradient(135deg, #23272A, #2C2F33);
+background: linear-gradient(135deg, #0072ff, #00c6ff);
 color: white;
 text-align: center;
 padding: 10px 0;
@@ -75,7 +75,7 @@ bottom: 0;
 }
 
 a {
-color: #7289DA;
+color: #FFF;
 text-decoration: none;
 }
 
@@ -85,6 +85,35 @@ text-decoration: underline;
 
 .release-date {
 font-size: 1.2em;
-color: #7289DA;
+color: #FFF;
 margin-top: 20px;
+}
+
+form {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+input[type="email"] {
+padding: 10px;
+margin: 10px 0;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+}
+
+form button {
+background: linear-gradient(135deg, #00c6ff, #0072ff);
+color: white;
+border: none;
+padding: 10px 20px;
+cursor: pointer;
+font-size: 16px;
+border-radius: 5px;
+transition: background 0.3s ease;
+}
+
+form button:hover {
+background: linear-gradient(135deg, #0072ff, #00c6ff);
 }
