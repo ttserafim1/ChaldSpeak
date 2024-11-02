@@ -1,6 +1,8 @@
+// Логика игры "Змейка"
 document.addEventListener('DOMContentLoaded', (event) => {
 const canvas = document.getElementById('snakeGame');
 const startButton = document.getElementById('startGame');
+const restartButton = document.getElementById('restartGame');
 let game;
 
 if (!canvas) {
@@ -21,10 +23,12 @@ let score;
 let d;
 
 startButton.addEventListener('click', startGame);
+restartButton.addEventListener('click', startGame);
 
 function startGame() {
 canvas.style.display = 'block';
 startButton.style.display = 'none';
+restartButton.style.display = 'none';
 snake = [{ x: 9 * box, y: 10 * box }];
 food = {
 x: Math.floor(Math.random() * 19 + 1) * box,
@@ -122,7 +126,10 @@ let fadeOut = setInterval(() => {
 ctx.fillStyle = `rgba(0, 0, 0, ${opacity})`;
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 opacity += 0.05;
-if (opacity >= 1) clearInterval(fadeOut);
+if (opacity >= 1) {
+clearInterval(fadeOut);
+restartButton.style.display = 'block';
+}
 }, 50);
 }
 });
