@@ -4,7 +4,6 @@ margin: 0;
 padding: 20px;
 background: linear-gradient(to right, #00c6ff, #0072ff);
 color: white;
-/* overflow: hidden;  Удалено для восстановления прокрутки */
 }
 
 .container {
@@ -73,7 +72,6 @@ outline: none;
 box-shadow: 0 0 5px rgba(0, 198, 255, 0.5);
 }
 
-/* Стили для фиолетового следа */
 .trail {
 position: absolute;
 width: 10px;
