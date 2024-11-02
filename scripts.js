@@ -1,6 +1,9 @@
 // Логика игры "Змейка"
 document.addEventListener('DOMContentLoaded', (event) => {
 const canvas = document.getElementById('snakeGame');
+const startButton = document.getElementById('startGame');
+let game;
+
 if (!canvas) {
 console.error('Canvas element not found!');
 return;
@@ -14,15 +17,25 @@ return;
 
 const box = 20;
 let snake = [];
-snake[0] = { x: 9 * box, y: 10 * box };
-let food = {
+let food;
+let score;
+let d;
+
+startButton.addEventListener('click', startGame);
+
+function startGame() {
+canvas.style.display = 'block';
+startButton.style.display = 'none';
+snake = [{ x: 9 * box, y: 10 * box }];
+food = {
 x: Math.floor(Math.random() * 19 + 1) * box,
 y: Math.floor(Math.random() * 19 + 1) * box
 };
-let score = 0;
-let d = 'RIGHT'; // Начальное направление движения змейки
-
+score = 0;
+d = 'RIGHT'; // Начальное направление движения змейки
 document.addEventListener('keydown', direction);
+game = setInterval(draw, 100);
+}
 
 function direction(event) {
 if (event.key === 'a' && d != 'RIGHT') {
@@ -86,6 +99,7 @@ y: snakeY
 
 if (snakeX < 0 || snakeX >= canvas.width || snakeY < 0 || snakeY >= canvas.height || collision(newHead, snake)) {
 clearInterval(game);
+gameOver();
 }
 
 snake.unshift(newHead);
@@ -95,5 +109,21 @@ ctx.font = '45px Changa one';
 ctx.fillText(score, 2 * box, 1.6 * box);
 }
 
-let game = setInterval(draw, 100);
+function gameOver() {
+ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+ctx.fillStyle = 'red';
+ctx.font = '75px Changa one';
+ctx.fillText('Game Over', canvas.width / 4, canvas.height / 2);
+
+// Анимация "Game Over"
+let opacity = 0;
+let fadeOut = setInterval(() => {
+ctx.fillStyle = `rgba(0, 0, 0, ${opacity})`;
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+opacity += 0.05;
+if (opacity >= 1) clearInterval(fadeOut);
+}, 50);
+}
 });
