@@ -13,66 +13,76 @@ emailjs.init("YOUR_USER_ID");
 </script>
 </head>
 <body>
-<header>
-<div class="container">
-<h1>Chald Speak</h1>
-<nav>
-<ul>
-<li><a href="#features">Функции</a></li>
-<li><a href="#download">Скачать</a></li>
-<li><a href="#contact">Контакты</a></li>
-<li><a href="https://ttserafim1.github.io/login-/">Войти/регистрация</a></li>
+<div class="sidebar">
+<div class="logo">Chald Speak</div>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item"><a href="#features" class="nav-link">Функции</a></li>
+<li class="nav-item"><a href="#download" class="nav-link">Скачать</a></li>
+<li class="nav-item"><a href="#contact" class="nav-link">Контакты</a></li>
+<li class="nav-item"><a href="https://ttserafim1.github.io/login-/" class="nav-link">Войти/регистрация</a></li>
 </ul>
 </nav>
 </div>
+<div class="main-content">
+<header class="header">
+<h1 class="page-title">Chald Speak</h1>
 </header>
 <main>
-<section id="features" class="container">
-<h2>Функции</h2>
-<p>Chald Speak предлагает быстрый и безопасный обмен сообщениями.</p>
-<ul>
-<li>Мгновенные сообщения</li>
-<li>Групповые чаты</li>
-<li>Шифрование сообщений</li>
-<li>Поддержка мультимедиа</li>
-<li>Кроссплатформенность</li>
+<section id="features" class="section">
+<div class="container">
+<h2 class="section-title">Функции</h2>
+<p class="section-description">Chald Speak предлагает быстрый и безопасный обмен сообщениями.</p>
+<ul class="features-list">
+<li class="feature-item">Мгновенные сообщения</li>
+<li class="feature-item">Групповые чаты</li>
+<li class="feature-item">Шифрование сообщений</li>
+<li class="feature-item">Поддержка мультимедиа</li>
+<li class="feature-item">Кроссплатформенность</li>
 </ul>
+</div>
 </section>
-<section id="download" class="container">
-<h2>Скачать</h2>
-<p>Скачайте Chald Speak для вашего устройства:</p>
-<button>Скачать для Windows</button>
-<button>Скачать для Android</button>
+<section id="download" class="section">
+<div class="container">
+<h2 class="section-title">Скачать</h2>
+<p class="section-description">Скачайте Chald Speak для вашего устройства:</p>
+<button class="btn">Скачать для Windows</button>
+<button class="btn">Скачать для Android</button>
 <p class="release-date">Примерная дата выхода: 30.5.2025</p>
+</div>
 </section>
-<section id="pre-register" class="container">
-<h2>Предварительная регистрация</h2>
-<p>Зарегистрируйтесь сейчас, чтобы первыми узнать о выходе Chald Speak:</p>
-<form id="registerForm">
-<input type="email" id="email" placeholder="Введите ваш email" required>
-<button type="submit">Зарегистрироваться</button>
+<section id="pre-register" class="section">
+<div class="container">
+<h2 class="section-title">Предварительная регистрация</h2>
+<p class="section-description">Зарегистрируйтесь сейчас, чтобы первыми узнать о выходе Chald Speak:</p>
+<form id="registerForm" class="form">
+<input type="email" id="email" class="form-input" placeholder="Введите ваш email" required>
+<button type="submit" class="btn">Зарегистрироваться</button>
 </form>
+</div>
 </section>
-<section id="about" class="container">
-<h2>О нас</h2>
-<p>Chald Speak — это инновационный мессенджер, созданный для удобного и безопасного общения. Мы стремимся предоставить пользователям лучший опыт обмена сообщениями.</p>
+<section id="about" class="section">
+<div class="container">
+<h2 class="section-title">О нас</h2>
+<p class="section-description">Chald Speak — это инновационный мессенджер, созданный для удобного и безопасного общения. Мы стремимся предоставить пользователям лучший опыт обмена сообщениями.</p>
+</div>
 </section>
-<section id="contact" class="container">
-<h2>Контакты</h2>
-<p>Свяжитесь с нами по email: <a href="mailto:support@chaldspeak.com">support@chaldspeak.com</a></p>
+<section id="contact" class="section">
+<div class="container">
+<h2 class="section-title">Контакты</h2>
+<p class="section-description">Свяжитесь с нами по email: <a href="mailto:support@chaldspeak.com" class="contact-link">support@chaldspeak.com</a></p>
+</div>
 </section>
-<section id="game" class="container">
-<h2>Игра "Змейка"</h2>
-<button id="startGame">Начать игру</button>
-<button id="restartGame" style="display:none;">Повторить игру</button>
+<section id="game" class="section">
+<div class="container">
+<h2 class="section-title">Игра "Змейка"</h2>
+<button id="startGame" class="btn">Начать игру</button>
+<button id="restartGame" class="btn" style="display:none;">Повторить игру</button>
 <canvas id="snakeGame" width="400" height="400" style="display:none;"></canvas>
+</div>
 </section>
 </main>
-<footer>
-<div class="container">
-<p>© 2024 Chald Speak. Все права защищены.</p>
 </div>
-</footer>
 <script src="scripts.js"></script>
 </body>
 </html>
