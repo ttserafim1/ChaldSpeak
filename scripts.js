@@ -21,6 +21,7 @@ y: Math.floor(Math.random() * 19 + 1) * box
 };
 let score = 0;
 let d;
+let backgroundColor = 0; // Начальный цвет фона (черный)
 
 document.addEventListener('keydown', direction);
 
@@ -46,11 +47,11 @@ return false;
 }
 
 function draw() {
-ctx.fillStyle = 'lightgreen';
+ctx.fillStyle = `rgb(${backgroundColor}, ${backgroundColor}, ${backgroundColor})`;
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 for (let i = 0; i < snake.length; i++) {
-ctx.fillStyle = (i == 0) ? 'green' : 'white';
+ctx.fillStyle = (i == 0) ? 'turquoise' : 'white';
 ctx.fillRect(snake[i].x, snake[i].y, box, box);
 
 ctx.strokeStyle = 'red';
@@ -74,6 +75,7 @@ food = {
 x: Math.floor(Math.random() * 19 + 1) * box,
 y: Math.floor(Math.random() * 19 + 1) * box
 };
+backgroundColor = Math.min(backgroundColor + 12.75, 255); // Увеличение яркости фона на 5%
 } else {
 snake.pop();
 }
