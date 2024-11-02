@@ -20,7 +20,7 @@ x: Math.floor(Math.random() * 19 + 1) * box,
 y: Math.floor(Math.random() * 19 + 1) * box
 };
 let score = 0;
-let d;
+let d = 'RIGHT'; // Начальное направление движения змейки
 
 document.addEventListener('keydown', direction);
 
