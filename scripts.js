@@ -133,3 +133,15 @@ restartButton.style.display = 'block';
 }, 50);
 }
 });
+document.addEventListener('DOMContentLoaded', () => {
+const changeUsernameBtn = document.getElementById('changeUsernameBtn');
+const usernameSpan = document.getElementById('username');
+
+changeUsernameBtn.addEventListener('click', () => {
+const newUsername = prompt('Введите новый ник:');
+if (newUsername) {
+usernameSpan.textContent = newUsername;
+changeUsernameBtn.disabled = true; // Отключаем кнопку после изменения ника
+}
+});
+});
