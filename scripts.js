@@ -1,4 +1,3 @@
-// Логика игры "Змейка"
 document.addEventListener('DOMContentLoaded', (event) => {
 const canvas = document.getElementById('snakeGame');
 const startButton = document.getElementById('startGame');
