@@ -25,13 +25,13 @@ let d;
 document.addEventListener('keydown', direction);
 
 function direction(event) {
-if (event.keyCode == 37 && d != 'RIGHT') {
+if (event.key === 'a' && d != 'RIGHT') {
 d = 'LEFT';
-} else if (event.keyCode == 38 && d != 'DOWN') {
+} else if (event.key === 'w' && d != 'DOWN') {
 d = 'UP';
-} else if (event.keyCode == 39 && d != 'LEFT') {
+} else if (event.key === 'd' && d != 'LEFT') {
 d = 'RIGHT';
-} else if (event.keyCode == 40 && d != 'UP') {
+} else if (event.key === 's' && d != 'UP') {
 d = 'DOWN';
 }
 }
